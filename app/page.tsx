@@ -1,3 +1,4 @@
+"use client"
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
@@ -6,6 +7,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import {Card, CardFooter, Image, Button} from "@nextui-org/react";
 
 export default function Home() {
 	return (
@@ -42,12 +44,71 @@ export default function Home() {
 				</Link>
 			</div>
 
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
+			<div className="mt-8 flex">
+			<Card
+			isFooterBlurred
+			radius="lg"
+			className="border-none"
+			>
+			<Image
+				alt="Woman listing to music"
+				className="object-cover"
+				height={400}
+				src="https://images.unsplash.com/photo-1634834300387-8015d9fb7550"
+				width={400}
+			/>
+			<CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+				<p className="text-tiny text-white/80">A bunch of placeholder text</p>
+				<div>
+					<Button className="text-tiny text-white padding-10" variant="solid" color="primary" radius="lg" size="sm">
+					Buy
+					</Button>
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					Info
+					</Button>
+				</div>	
+			</CardFooter>
+			</Card>
+
+			<Card
+			isFooterBlurred
+			radius="lg"
+			className="border-none"
+			>
+			<Image
+				alt="Woman listing to music"
+				className="object-cover"
+				height={400}
+				src="https://images.unsplash.com/photo-1634834300387-8015d9fb7550"
+				width={400}
+			/>
+			<CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+				<p className="text-tiny text-white/80">A bunch of placeholder text</p>
+				<Button className="text-tiny text-white" variant="faded" color="primary" radius="lg" size="sm">
+				Info
+				</Button>
+			</CardFooter>
+			</Card>
+
+			<Card
+			isFooterBlurred
+			radius="lg"
+			className="border-none"
+			>
+			<Image
+				alt="Woman listing to music"
+				className="object-cover"
+				height={400}
+				src="https://images.unsplash.com/photo-1634834300387-8015d9fb7550"
+				width={500}
+			/>
+			<CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+				<p className="text-tiny text-white/80">A bunch of placeholder text</p>
+				<Button className="text-tiny text-white" variant="ghost" color="primary" radius="lg" size="sm">
+				Info
+				</Button>
+			</CardFooter>
+			</Card>
 			</div>
 		</section>
 	);
