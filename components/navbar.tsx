@@ -20,11 +20,11 @@ import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
+// 	TwitterIcon,
+// 	GithubIcon,
+// 	DiscordIcon,
 	HeartFilledIcon,
-	SearchIcon,
+// 	SearchIcon,
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
@@ -83,7 +83,7 @@ export const Navbar = () => {
 				justify="end"
 			>
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+					{/* <Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
 					</Link>
 					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
@@ -91,7 +91,7 @@ export const Navbar = () => {
 					</Link>
 					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
-					</Link>
+					</Link> */}
 					<ThemeSwitch />
 				</NavbarItem>
 				{/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
@@ -110,9 +110,9 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-default-500" />
-				</Link>
+				{/* <Link isExternal href={siteConfig.links.github} aria-label="Github"> */}
+					{/* <GithubIcon className="text-default-500" /> */}
+				{/* </Link> */}
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
