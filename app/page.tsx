@@ -60,6 +60,7 @@ export default function Home() {
 			</CardFooter>
 			</Card>
 			&nbsp;
+			&nbsp;
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -85,6 +86,7 @@ export default function Home() {
 				</div>	
 			</CardFooter>
 			</Card>
+			&nbsp;
 			&nbsp;
 			<Card
 			isFooterBlurred

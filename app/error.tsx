@@ -1,5 +1,4 @@
 'use client' 
-import { siteConfig } from "@/config/site";
 import { useEffect } from 'react'
  
 export default function Error({
