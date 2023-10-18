@@ -14,7 +14,7 @@ export default function Home() {
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
 				<h1 className={title()}>placeholder&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>accent&nbsp;</h1>
+				<h1 className={title({ color: "pink" })}>accent&nbsp;</h1>
 				<br />
 				<h1 className={title()}>
 					the rest of the sentence
@@ -33,7 +33,7 @@ export default function Home() {
 					About us
 				</Link>
 			</div>
-			<div className="mt-8 flex">
+			<div className="mt-19 flex">
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -70,7 +70,7 @@ export default function Home() {
 				alt="Woman listing to music"
 				className="object-cover"
 				height={300}
-				src="http://placekitten.com/400/300"
+				src="https://source.unsplash.com/random/800x600"
 				width={400}
 			/>
 			<CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
@@ -97,7 +97,7 @@ export default function Home() {
 				alt="Woman listing to music"
 				className="object-cover"
 				height={300}
-				src="http://placekitten.com/400/300"
+				src="https://source.unsplash.com/random/1200x900"
 				width={400}
 			/>
 			<CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">

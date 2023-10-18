@@ -48,11 +48,20 @@ export default function RootLayout({
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://agentseed.org"
-								title="nextui.org homepage"
+								href="/about-site"
+								title="About the site"
 							>
 								<span className="text-default-600">Built by</span>
 								<p className="text-primary">Agentseed</p>
+							</Link>
+							&nbsp;&nbsp;|&nbsp;&nbsp;
+							<Link
+								isExternal
+								className="flex items-center gap-1 text-current"
+								href="/about-site"
+								title="About the site"
+							>
+								<p className="text-primary">About site</p>
 							</Link>
 						</footer>
 					</div>
