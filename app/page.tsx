@@ -1,13 +1,14 @@
 "use client"
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
+import { Spacer } from "@nextui-org/spacer";
 // import { Snippet } from "@nextui-org/snippet";
 // import { Code } from "@nextui-org/code"
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { HeartFilledIcon } from "@/components/icons";
-import {Card, CardFooter, Image, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
 				<h1 className={title()}>placeholder&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>accent&nbsp;</h1>
+				<h1 className={title({ color: "pink" })}>accent&nbsp;</h1>
 				<br />
 				<h1 className={title()}>
 					the rest of the sentence
@@ -99,8 +100,7 @@ export default function Home() {
 				</div>	
 			</CardFooter>
 			</Card>
-			&nbsp;
-			&nbsp;
+			<Spacer x={4}/>
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -164,8 +164,7 @@ export default function Home() {
 				</div>	
 			</CardFooter>
 			</Card>
-			&nbsp;
-			&nbsp;
+			<Spacer x={4}/>
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -232,10 +231,17 @@ export default function Home() {
 			</div>
 			<div className="gap-3 text-center">
 				<h1 className={title({ class: "mt-4" })}>Title</h1>
+				<Spacer y={4}/>
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
+			<Card>
+				<CardBody className="text-center">
+					<h1 className={title({ class: "mt-4", color: "pink" })}>$2,000</h1>
+					<p>Raised</p>
+				</CardBody>
+				</Card>
 		</section>
 	);
 }
