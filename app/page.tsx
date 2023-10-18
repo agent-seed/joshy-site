@@ -1,15 +1,18 @@
 "use client"
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
+import { Spacer } from "@nextui-org/spacer";
 // import { Snippet } from "@nextui-org/snippet";
 // import { Code } from "@nextui-org/code"
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { HeartFilledIcon } from "@/components/icons";
-import {Card, CardFooter, Image, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
 export default function Home() {
+	const {isOpen, onOpen, onOpenChange, onClose:any} = useDisclosure();
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
@@ -53,14 +56,51 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose:any) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://placekitten.com/1920/1080"
+									alt="NextUI Album Cover"
+									// classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
-			&nbsp;
-			&nbsp;
+			<Spacer x={4}/>
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -80,14 +120,51 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose:any) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://placekitten.com/1920/1080"
+									alt="NextUI Album Cover"
+									// classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
-			&nbsp;
-			&nbsp;
+			<Spacer x={4}/>
 			<Card
 			isFooterBlurred
 			radius="lg"
@@ -107,19 +184,64 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose:any) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://source.unsplash.com/random/1920x1080"
+									alt="NextUI Album Cover"
+									// classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
 			</div>
 			<div className="gap-3 text-center">
 				<h1 className={title({ class: "mt-4" })}>Title</h1>
+				<Spacer y={4}/>
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
+			<Card>
+				<CardBody className="text-center">
+					<h1 className={title({ class: "mt-4", color: "pink" })}>$2,000</h1>
+					<p>Raised</p>
+				</CardBody>
+				</Card>
 		</section>
 	);
 }
