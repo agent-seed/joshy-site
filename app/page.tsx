@@ -8,8 +8,10 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { HeartFilledIcon } from "@/components/icons";
 import {Card, CardFooter, Image, Button} from "@nextui-org/react";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
 export default function Home() {
+	const {isOpen, onOpen, onOpenChange} = useDisclosure();
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
@@ -53,9 +55,47 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://placekitten.com/1920/1080"
+									alt="NextUI Album Cover"
+									classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
@@ -80,9 +120,47 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://placekitten.com/1920/1080"
+									alt="NextUI Album Cover"
+									classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
@@ -107,9 +185,47 @@ export default function Home() {
 					Buy
 					</Button>
 					&nbsp;
-					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm">
+					<Button className="text-tiny text-white" variant="bordered" color="primary" radius="lg" size="sm" onPress={onOpen}>
 					Info
 					</Button>
+					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
+						<ModalContent>
+							{(onClose) => (
+							<>
+								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
+								<ModalBody>
+								<Image
+									isBlurred
+									// width={100}
+									src="https://source.unsplash.com/random/1920x1080"
+									alt="NextUI Album Cover"
+									classNames="m-5"
+									/>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									Nullam pulvinar risus non risus hendrerit venenatis.
+									Pellentesque sit amet hendrerit risus, sed porttitor quam.
+								</p>
+								<p>
+									Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit
+									dolor adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. 
+									Velit duis sit officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. 
+									Et mollit incididunt nisi consectetur esse laborum eiusmod pariatur 
+									proident Lorem eiusmod et. Culpa deserunt nostrud ad veniam.
+								</p>
+								</ModalBody>
+								<ModalFooter>
+								<Button color="danger" variant="light" onPress={onClose}>
+									Close
+								</Button>
+								<Link as={NextLink} className={buttonStyles({ variant: "shadow", color: "primary" })} href={'/payment'}>
+									Buy
+								</Link>
+								</ModalFooter>
+							</>
+							)}
+						</ModalContent>
+					</Modal>
 				</div>	
 			</CardFooter>
 			</Card>
