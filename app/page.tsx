@@ -12,7 +12,7 @@ import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
 export default function Home() {
-	const {isOpen, onOpen, onOpenChange} = useDisclosure();
+	const {isOpen, onOpen, onOpenChange, onClose:any} = useDisclosure();
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
@@ -61,7 +61,7 @@ export default function Home() {
 					</Button>
 					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
 						<ModalContent>
-							{(onClose) => (
+							{(onClose:any) => (
 							<>
 								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
 								<ModalBody>
@@ -70,7 +70,7 @@ export default function Home() {
 									// width={100}
 									src="https://placekitten.com/1920/1080"
 									alt="NextUI Album Cover"
-									classNames="m-5"
+									// classNames="m-5"
 									/>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -125,7 +125,7 @@ export default function Home() {
 					</Button>
 					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
 						<ModalContent>
-							{(onClose) => (
+							{(onClose:any) => (
 							<>
 								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
 								<ModalBody>
@@ -134,7 +134,7 @@ export default function Home() {
 									// width={100}
 									src="https://placekitten.com/1920/1080"
 									alt="NextUI Album Cover"
-									classNames="m-5"
+									// classNames="m-5"
 									/>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -189,7 +189,7 @@ export default function Home() {
 					</Button>
 					<Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" size="2xl">
 						<ModalContent>
-							{(onClose) => (
+							{(onClose:any) => (
 							<>
 								<ModalHeader className="flex flex-col gap-1 items-center">Modal Title</ModalHeader>
 								<ModalBody>
@@ -198,7 +198,7 @@ export default function Home() {
 									// width={100}
 									src="https://source.unsplash.com/random/1920x1080"
 									alt="NextUI Album Cover"
-									classNames="m-5"
+									// classNames="m-5"
 									/>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
