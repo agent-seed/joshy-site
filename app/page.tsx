@@ -1,4 +1,6 @@
 "use client"
+import {CountUpProps} from "react-countup"
+import CountUp from 'react-countup';
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { Spacer } from "@nextui-org/spacer";
@@ -8,11 +10,21 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { HeartFilledIcon } from "@/components/icons";
+import {Progress} from "@nextui-org/progress";
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
 export default function Home() {
 	const {isOpen, onOpen, onOpenChange, onClose:any} = useDisclosure();
+	function randomNumber(max:number) {
+		return Math.floor(Math.random() * max);
+	}
+	var raised1:number = randomNumber(10000)
+	var raised2:number = randomNumber(10000)
+	var raised3:number = randomNumber(10000)
+	var percent1:number = raised1/100
+	var percent2:number = raised2/100
+	var percent3:number = raised3/100
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
@@ -236,12 +248,38 @@ export default function Home() {
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 			</div>
-			<Card>
-				<CardBody className="text-center">
-					<h1 className={title({ class: "mt-4", color: "pink" })}>$2,000</h1>
-					<p>Raised</p>
-				</CardBody>
+			<div className="flex justify-content">
+				<Card>
+					<CardBody className="text-center">
+						<p>CharityName</p>
+						<h1 className={title({ class: "mt-4", color: "pink" })}><CountUp prefix="$" enableScrollSpy={true} end={raised1}/></h1>
+						<p className={subtitle({ class: "mt-4"})}>Raised</p>
+						{/* <p>out of $10,000</p> */}
+						<Spacer y={2}/>
+						<Progress size="md" aria-label="Loading..." color="primary" value={percent1} />
+					</CardBody>
 				</Card>
+				<Spacer x={4}/>
+				<Card>
+					<CardBody className="text-center">
+						<p>CharityName</p>
+						<h1 className={title({ class: "mt-4", color: "pink" })}><CountUp prefix="$" enableScrollSpy={true} end={raised2} /></h1>
+						<p className={subtitle({ class: "mt-4"})}>Raised</p>
+						<Spacer y={2}/>
+						<Progress size="md" aria-label="Loading..." color="primary" value={percent2} />
+					</CardBody>
+				</Card>
+				<Spacer x={4}/>
+				<Card>
+					<CardBody className="text-center">
+						<p>CharityName</p>
+						<h1 className={title({ class: "mt-4", color: "pink" })}><CountUp prefix="$" enableScrollSpy={true} end={raised3} /></h1>
+						<p className={subtitle({ class: "mt-4"})}>Raised</p>
+						<Spacer y={2}/>
+						<Progress size="md" aria-label="Loading..." color="primary" value={percent3} />
+					</CardBody>
+				</Card>
+			</div>	
 		</section>
 	);
 }
