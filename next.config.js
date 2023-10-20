@@ -1,23 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    // plugins: [
+    //     nextui({
+    //       themes: {
+    //         light: {
+    //           // ...
+    //           colors: {},
+    //         },
+    //         dark: {
+    //           // ...
+    //           colors: {
+    //               primary: 'ff5757'
+    //           },
+    //         },
+    //         // ... custom themes
+    //       },
+    //     }),
+    //   ],
+}
 
-// module.exports = nextConfig
-module.exports = {
-    plugins: [
-      nextui({
-        themes: {
-          light: {
-            // ...
-            colors: {},
-          },
-          dark: {
-            // ...
-            colors: {
-                primary: 'ff5757'
-            },
-          },
-          // ... custom themes
-        },
-      }),
-    ],
-  };
+module.exports = nextConfig
