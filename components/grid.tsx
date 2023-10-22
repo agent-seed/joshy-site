@@ -1,5 +1,5 @@
 import * as React from "react";
-const SVGComponent = (props:any) => (
+const grid = (props:any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -107,4 +107,4 @@ const SVGComponent = (props:any) => (
     </g>
   </svg>
 );
-export default SVGComponent;
+export default grid;
