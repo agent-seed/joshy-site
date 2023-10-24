@@ -1,6 +1,6 @@
 # Setup
 
-1. Clone down the repo `git clone https://github.com/agent-seed/joshy-site
+1. Clone down the repo `git clone https://github.com/agent-seed/joshy-site`
 2. Install the dependencies `npm install`
 3. run the development server to view `npm run dev`
 
