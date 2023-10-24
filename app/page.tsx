@@ -13,6 +13,8 @@ import { HeartFilledIcon } from "@/components/icons";
 import {Progress} from "@nextui-org/progress";
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
+import { Analytics } from "@/components/analytics"
+import Script from "next/script";
 
 export default function Home() {
 	const {isOpen, onOpen, onOpenChange, onClose:any} = useDisclosure();
@@ -26,8 +28,9 @@ export default function Home() {
 	var percent2:number = raised2/100
 	var percent3:number = raised3/100
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
+				<Analytics></Analytics>		
+				<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 				<h1 className={title()}>placeholder&nbsp;</h1>
 				<h1 className={title({ color: "pink" })}>accent&nbsp;</h1>
 				<br />
